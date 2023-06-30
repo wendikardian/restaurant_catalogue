@@ -11,8 +11,8 @@ import swRegister from './utils/sw-register';
 import CONFIG from './globals/config';
 
 const app = new App({
-  button: document.querySelector('#hamburgerButton'),
-  drawer: document.querySelector('#navigationDrawer'),
+  button: document.querySelector('.header__menu'),
+  drawer: document.querySelector('#mobile-menu'),
   content: document.querySelector('#mainContent'),
 });
 
