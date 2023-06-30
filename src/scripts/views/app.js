@@ -20,10 +20,10 @@ class App {
   }
 
   async renderPage() {
-    const url = UrlParser.parseActiveUrlWithCombiner();
+    const url = UrlParser.withCombiner();
     const page = routes[url];
-    this._content.innerHTML = await page.render();
-    await page.afterRender();
+    // this._content.innerHTML = await page.onMounted();
+    // await page.onAfterMounted();
   }
 }
 
