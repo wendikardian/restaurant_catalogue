@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-unresolved
 const path = require('path');
 const { merge } = require('webpack-merge');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
