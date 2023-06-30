@@ -1,4 +1,4 @@
-import DrawerInitiator from '../utils/drawer-initiator';
+// import DrawerInitiator from '../utils/drawer-initiator';
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
 
@@ -12,11 +12,11 @@ class App {
 
   // eslint-disable-next-line class-methods-use-this
   _initialAppShell() {
-    DrawerInitiator.init({
-      button: this._button,
-      drawer: this._drawer,
-      content: this._content,
-    });
+    // DrawerInitiator.init({
+    //   button: this._button,
+    //   drawer: this._drawer,
+    //   content: this._content,
+    // });
   }
 
   async renderPage() {

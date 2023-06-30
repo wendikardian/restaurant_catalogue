@@ -2,8 +2,8 @@
 // eslint-disable-next-line import/no-unresolved
 // eslint-disable-next-line import/no-unresolved
 import 'regenerator-runtime';
-import '../styles/style.css';
-import '../styles/responsive.css';
+import '../styles/main.scss';
+import '../styles/responsive.scss';
 import App from './views/app';
 import swRegister from './utils/sw-register';
 // import webSocketInitiator from './utils/websocket-initiator';
@@ -16,17 +16,17 @@ const app = new App({
   content: document.querySelector('#mainContent'),
 });
 
-window.addEventListener('hashchange', () => {
-  app.renderPage();
-});
+// window.addEventListener('hashchange', () => {
+//   app.renderPage();
+// });
 
 window.addEventListener('load', () => {
   app.renderPage();
   swRegister();
-  webSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
+  // webSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
 
-  FooterToolsInitiator.init({
-    subscribeButton: document.querySelector('#subscribePushNotification'),
-    unsubscribeButton: document.querySelector('#unsubscribePushNotification'),
-  });
+  // FooterToolsInitiator.init({
+  //   subscribeButton: document.querySelector('#subscribePushNotification'),
+  //   unsubscribeButton: document.querySelector('#unsubscribePushNotification'),
+  // });
 });
