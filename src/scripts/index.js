@@ -13,20 +13,18 @@ import CONFIG from './globals/config';
 const app = new App({
   button: document.querySelector('.header__menu'),
   drawer: document.querySelector('#mobile-menu'),
-  content: document.querySelector('#mainContent'),
+  content: document.querySelector('.restaurant-list'),
 });
 
 // window.addEventListener('hashchange', () => {
 //   app.renderPage();
 // });
 
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
   app.renderPage();
   swRegister();
-  // webSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
+});
 
-  // FooterToolsInitiator.init({
-  //   subscribeButton: document.querySelector('#subscribePushNotification'),
-  //   unsubscribeButton: document.querySelector('#unsubscribePushNotification'),
-  // });
+window.addEventListener('hashchange', () => {
+  app.renderPage();
 });

@@ -1,14 +1,30 @@
 /* eslint-disable no-unused-vars */
 import UrlParser from '../../routes/url-parser';
+import dataRestaurants from '../../globals/api-endpoint';
+import itemRestaurant from '../templates/itemRestaurant';
+import CONFIG from '../../globals/config';
 
 const Main = {
   async render() {
     return `
-        <h2>Main Page</h2>
+    <div class="restaurant-container" id="restaurant-container">
         `;
   },
   async afterRender() {
-    const url = UrlParser.parseActiveUrlWithoutCombiner();
+    const restContainer = document.querySelector('.restaurant-container');
+    const data = await dataRestaurants.getRestaurants();
+    const resData = data.restaurants;
+    restContainer.innerHTML = '';
+    resData.forEach((resto) => {
+      const imgPath = `${CONFIG.API_URL}${CONFIG.IMG_PATH_SMALL}${resto.pictureId}`;
+      const limitDesc = `${resto.description.substring(9, 100)} ... `;
+      const card = itemRestaurant({
+        data : resto,
+        imagePath: imgPath,
+        description: limitDesc,
+      });
+      restContainer.innerHTML += card;
+    });
   },
 };
 

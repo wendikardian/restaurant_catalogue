@@ -3,7 +3,7 @@ import CONFIG from './config';
 const dataRestaurants = {
   async getRestaurants() {
     try {
-      const response = await fetch(`${CONFIG.BASE_URL}list`, {
+      const response = await fetch(`${CONFIG.API_URL}/list`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
