@@ -30,7 +30,7 @@ class Reviews {
 
   submitReview() {
     const formSubmit = document.querySelector('#submit_review');
-    formSubmit.addEventListener('submit', (e) => {
+    formSubmit.addEventListener('submit', () => {
       const name = document.querySelector('#name-review').value;
       const reviewContent = document.querySelector('#review').value;
       console.log(name, reviewContent, this._dataId);
@@ -39,9 +39,6 @@ class Reviews {
           id: this._dataId,
           name,
           review: reviewContent,
-        })
-        .then(() => {
-          formSubmit.reset();
         });
     });
   }

@@ -9,19 +9,19 @@ const Detail = {
   async render() {
     return `
         <div class="_detail_container">
-          <div class="_detail_description">
+          <div class="_detail_description"   tabindex="0">
 
             <div class="_add_fav">
              <button class="fav" > 💓 Add to Fav</button>
             </div>
           </div>
-          <div class="menu_list">
-            <div class="menu_item">
+          <div class="menu_list"  tabindex="0">
+            <div class="menu_item"  tabindex="0">
             <h2>🍗 Food</h2>
             <div class="list_menu food">
             </div>
             </div>
-            <div class="menu_item">
+            <div class="menu_item"  tabindex="0"    >
             <h2>☕ Drink </h2>
             <div class="list_menu drink">
             </div>
@@ -37,19 +37,17 @@ const Detail = {
         `;
   },
 
-  // eslint-disable-next-line no-plusplus
   async afterRender() {
     const url = UrlParser.withoutCombiner();
     const { restaurant } = await dataRestaurants.getDetailSpecified(url.id);
-    console.log(restaurant);
     const detailDescriptionDiv = document.querySelector('._detail_description');
     detailDescriptionDiv.innerHTML = '';
     detailDescriptionDiv.innerHTML += detailDescription({ data: restaurant });
-    // create element div with class _detail_categories
+
     const divCategories = document.createElement('div');
     divCategories.classList.add('_detail_categories');
-    // eslint-disable-next-line no-plusplus
-    for (let i = 0; i < restaurant.categories.length; i++) {
+
+    for (let i = 0; i < restaurant.categories.length; i += 1) {
       const p = document.createElement('p');
       p.innerText = `#${restaurant.categories[i].name}`;
       divCategories.appendChild(p);

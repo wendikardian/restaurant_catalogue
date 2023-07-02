@@ -27,7 +27,6 @@
       display: block;
       transform: translate(100px, 60px);
       font-size: 20px;
-      // top: 300px;
     }
 
     .menu {
@@ -65,9 +64,6 @@
   }
 
   @media screen and (min-width: 700px) {
-    .caption-desc {
-      // font-size: 12px;
-    }
 
     .mobile-menu {
       display: block;

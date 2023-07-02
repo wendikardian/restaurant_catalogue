@@ -17,7 +17,6 @@ const Main = {
     const resData = data.restaurants;
     restContainer.innerHTML = '';
     resData.forEach((resto) => {
-      console.log(resto);
       const imgPath = `${CONFIG.API_URL}${CONFIG.IMG_PATH_SMALL}`;
       const limitDesc = `${resto.description.substring(9, 100)} ... `;
       const card = itemRestaurant({

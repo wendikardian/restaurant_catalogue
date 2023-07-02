@@ -11,7 +11,7 @@ const Favorites = {
     <main-element main-title="My Fav Restaurant"></main-element>
         `;
   },
-  // eslint-disable-next-line no-empty-function
+
   async afterRender() {
     const restaurants = await FavoriteResto.allResto();
     const restContainer = document.querySelector('.restaurant-container');

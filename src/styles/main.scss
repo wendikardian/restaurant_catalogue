@@ -245,7 +245,7 @@ input{
   min-height: 50px;
 
 }
-// can you give me example of select style
+
 select{
   min-height: 50px;
   width: 100%;
@@ -274,16 +274,10 @@ button#menu{
 
 li a{
   margin: 15px;
-  // padding: 20px;
-
   min-height: 50px ;
-  // background-color: red;
 }
 
 
-.menu li{
-  // padding: 10px;
-}
 
 .__see_detail{
   color: rgb(46, 133, 233);
@@ -300,7 +294,6 @@ li a{
 .__see_detail:hover{
   background-color: rgb(46, 133, 233);
   color: white;
-  // make it bigger with delay animation
   transform: scale(1.1);
   transition: transform 0.5s;
 
@@ -311,7 +304,6 @@ li a{
   display: flex;
   flex-direction: column;
   align-items: center;
-  // background-color: red ;
   justify-content: center;
 }
 
@@ -353,7 +345,6 @@ li a{
 ._detail_categories p:hover{
   background-color: rgb(46, 133, 233);
   color: white;
-  // make it bigger with delay animation
   transform: scale(1.1);
   transition: transform 0.5s;
   cursor: pointer;
@@ -375,7 +366,6 @@ li a{
 .liked{
   background-color: rgb(233, 49, 46);
   color: white;
-  // make it bigger with delay animation
   transform: scale(1.1);
   transition: transform 0.5s;
   cursor: pointer;
@@ -395,7 +385,6 @@ li a{
 .menu_item{
   flex-basis: 1;
   width: 45%;
-  // border-left: 1px solid #747171;
   margin-left: 20px;
 }
 
@@ -426,7 +415,6 @@ li a{
 .list_menu p:hover{
   background-color: rgb(46, 133, 233);
   color: white;
-  // make it bigger with delay animation
   transform: scale(1.1);
   transition: transform 0.5s;
   cursor: pointer;
