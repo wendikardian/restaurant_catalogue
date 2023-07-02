@@ -19,6 +19,21 @@ const dataRestaurants = {
       return error;
     }
   },
+
+  async getDetailSpecified(id) {
+    try {
+      const response = await fetch(`${CONFIG.API_URL}/detail/${id}`, {
+        cache: 'reload',
+      });
+      if (response.ok) {
+        return response.json();
+      }
+      throw new Error('Something went wrong ! ');
+    } catch (error) {
+      return error;
+    }
+  },
+
 };
 
 export default dataRestaurants;

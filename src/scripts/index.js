@@ -14,6 +14,7 @@ const app = new App({
   button: document.querySelector('.header__menu'),
   drawer: document.querySelector('#mobile-menu'),
   content: document.querySelector('.restaurant-list'),
+  main: document.querySelector('main'),
 });
 
 // window.addEventListener('hashchange', () => {
