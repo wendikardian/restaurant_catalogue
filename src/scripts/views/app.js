@@ -4,7 +4,9 @@ import routes from '../routes/routes';
 import DrawerInitiator from '../utils/drawer_utils';
 
 class App {
-  constructor({ button, drawer, content, main }) {
+  constructor({
+    button, drawer, content, main,
+  }) {
     this._button = button;
     this._drawer = drawer;
     this._content = content;
@@ -12,7 +14,6 @@ class App {
     this._initialAppShell();
   }
 
-  // eslint-disable-next-line class-methods-use-this
   _initialAppShell() {
     DrawerInitiator.init({
       button: this._button,

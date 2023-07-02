@@ -3,12 +3,12 @@
 import dataRestaurants from '../../globals/api-endpoint';
 import itemRestaurant from '../templates/itemRestaurant';
 import CONFIG from '../../globals/config';
+import '../templates/CostumeMainElement';
 
 const Main = {
   async render() {
     return `
-    <h1 class="title-restaurant" tabindex="0">Explore here</h1>
-    <div class="restaurant-container" id="restaurant-container">
+    <main-element main-title="Explore Here !"></main-element>
         `;
   },
   async afterRender() {

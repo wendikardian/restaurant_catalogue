@@ -3,6 +3,7 @@ import UrlParser from '../../routes/url-parser';
 import dataRestaurants from '../../globals/api-endpoint';
 import detailDescription from '../templates/detailDescription';
 import LikeButtonInitiator from '../../utils/like_button_initiator';
+import Reviews from '../../utils/review_utils';
 
 const Detail = {
   async render() {
@@ -26,6 +27,12 @@ const Detail = {
             </div>
             </div>
           </div>
+          <div class="review_container">
+
+          </div>
+          <div class="list_review">
+          </div>
+
         </div>
         `;
   },
@@ -66,7 +73,15 @@ const Detail = {
       likeButtonContainer: document.querySelector('._add_fav'),
       resto: { ...restaurant },
     });
+    const reviews = new Reviews({
+      reviewsContainer: document.querySelector('.review_container'),
+      dataId: url.id,
+    });
+    reviews.addReview();
+    reviews.submitReview();
+    reviews.list();
   },
+
 };
 
 export default Detail;
