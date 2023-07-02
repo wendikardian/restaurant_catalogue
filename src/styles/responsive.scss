@@ -42,6 +42,25 @@
       padding: 20px;
     }
 
+    .menu_list{
+
+      display: flex;
+      flex-direction:column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu_item{
+      width: 90%;
+    }
+
+    .food{
+      border-right: 0px solid #747171;
+      border-bottom: 1px solid #747171;
+      padding-bottom: 20px;
+
+    }
+
   }
 
   @media screen and (min-width: 700px) {

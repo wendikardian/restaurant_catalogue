@@ -380,3 +380,54 @@ li a{
   transition: transform 0.5s;
   cursor: pointer;
 }
+
+.menu_list{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-shadow: rgba(132, 130, 130, 0.24) 0px 3px 8px;
+  width: 70%;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.menu_item{
+  flex-basis: 1;
+  width: 45%;
+  // border-left: 1px solid #747171;
+  margin-left: 20px;
+}
+
+.food{
+  border-right: 1px solid #747171;
+
+}
+
+.menu_item h2{
+  text-align: center;
+}
+
+.list_menu{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list_menu p{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #747171;
+  min-height: 20px;
+  background-color: white;
+  padding: 10px;
+}
+
+.list_menu p:hover{
+  background-color: rgb(46, 133, 233);
+  color: white;
+  // make it bigger with delay animation
+  transform: scale(1.1);
+  transition: transform 0.5s;
+  cursor: pointer;
+}
